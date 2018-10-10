@@ -115,7 +115,7 @@ class TVMFunctor {
       fset_stream_(dev_type, rctx.ctx.dev_id, nullptr);
 #else
       LOG(FATAL) << "Please compile with CUDA enabled for cuda features";
-#endif
+#endif // MXNET_USE_CUDA
     } else {
       func_.CallPacked(args, &rv);
     }
